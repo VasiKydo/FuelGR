@@ -1,0 +1,194 @@
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+        <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAGBYDttAf6XX4BNWv-OKm_dL6xblE_bY&callback=initMap&libraries=&v=weekly"defer></script> 
+    
+    <style type="text/css">
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+
+      /* Optional: Makes the sample page fill the window. */
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <script>
+      (function(exports) {
+        "use strict";
+
+        // Initialize and add the map
+        function initMap() {
+        // The location of Uluru
+        var uluru = {lat: 39.643452, lng: 22.413208};
+        // The map, centered at Uluru
+        var map = new google.maps.Map(
+       document.getElementById('map'), {zoom: 4, center: uluru, mapTypeId: 'terrain'});
+      // The marker, positioned at Uluru
+      var marker = new google.maps.Marker({position: uluru, map: map});
+       }
+
+        
+        exports.initMap = initMap;
+      })((this.window = this.window || {}));
+    </script>
+
+
+    </head>
+
+    <title>Welcome to fuel.gr</title>
+    <body>
+      
+        <div class="card text-center">
+            <div class="card-header"> Welcome to fuel.gr!
+                
+              
+            </div>
+            <div class="card-body">
+              <h5 class="card-title">Make your next fill-up! choose the nearest gas-station!</h5>
+              
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#exampleModal">Log in</button>
+              
+               <!-- Modal -->
+              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+               <div class="modal-dialog">
+                <div class="modal-content">
+                 <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Log In</h5>
+                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                   </button>
+                 </div>
+                 <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">UserName</label>
+                          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                          <small id="emailHelp" class="form-text text-muted">Please enter your User Name</small>
+                        </div>
+                        <div class="form-group">
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <label for="exampleInputPassword1">Password</label>
+                                    <input type="password" class="form-control" id="exampleInputPassword1">
+                                </div>
+                              </form>
+                            </div> 
+          
+                 </div>
+                 <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                 <button type="button" class="btn btn-primary">Log In</button>
+               </div>
+              </div>
+             </div>
+            </div>
+
+              <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#staticBackdrop">Sign up</button>
+              
+              <!-- Modal -->
+              
+ <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+
+          <h5 class="modal-title" id="staticBackdropLabel">Sign Up</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="modal-body">
+            <form id="sign_up_form">
+                <div class="form-group">
+                  <label for="formGroupExampleInput">User Name</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" name="username" placeholder="Please enter your User name">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" name="password" id="exampleInputPassword1">
+                </div>
+            </form>
+
+          
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary signup">Sign Up</button>
+        </div>
+      </form>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+            <div class="card-footer text-muted">
+                © Vasiliki Kydona
+            </div>
+            
+          </div>
+
+        
+          <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script>
+      //    function singup (self) {
+            self = $(self);
+            // get form data
+  //  var sign_up_form=$(this);
+    //var form_data=JSON.stringify(sign_up_form.serializeObject());
+        $('button.signup').off('click').click(function(e){
+          $('#sign_up_form').trigger('reset');
+ // submit form data to api
+    $.ajax({
+        url: "api/create_user.php",
+        type : "POST",
+        dataType:'JSON',
+       // contentType : 'application/json',
+        data : $('#sign_up_form').serialize(),//form_data,
+        success : function(result) {
+          console.log(result);
+            // if response is a success, tell the user it was a successful sign up & empty the input boxes
+            $('#response').html("<div class='alert alert-success'>Successful sign up. Please login.</div>");
+            //sign_up_form.find('input').val('');
+        },
+        error: function(xhr, resp, text){
+          console.log(xhr);
+            // on error, tell the user sign up failed
+            $('#response').html("<div class='alert alert-danger'>Unable to sign up. Please contact admin.</div>");
+        }
+        });
+ 
+        });
+   
+         //return false;
+         //  }
+        </script>
+
+<div id="map"></div> 
+      
+    </body>
+</html>
